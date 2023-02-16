@@ -9,7 +9,7 @@ class ReusableCard extends StatelessWidget {
     required this.color,
     required this.cardChild,
     this.onTab,
-  },
+  }
 ) : super(key: key);
 
   @override
