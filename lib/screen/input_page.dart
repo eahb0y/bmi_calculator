@@ -25,7 +25,7 @@ class _InputPageState extends State<InputPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('BMI-CALCULATOR'),
+        title: const Center(child: Text('BMI-CALCULATOR')),
       ),
       body: Column(
         children: [
@@ -221,10 +221,11 @@ class _InputPageState extends State<InputPage> {
             child: ButtonButtomWidget(
               buttonLabel: 'CALCULATE',
               onPressed: () {
+                double convert = height / 100;
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const ResultPage(),
+                    builder: (context) => ResultPage(height: convert, weight: weight, age: age, gender: selectedGender,),
                   ),
                 );
               },
